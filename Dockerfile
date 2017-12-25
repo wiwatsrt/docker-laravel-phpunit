@@ -3,7 +3,7 @@ FROM wiwatsrt/docker-laravel-composer
 WORKDIR /tmp
 
 # Run composer and phpunit installation.
-RUN composer require "phpunit/phpunit:~5.7.12" --no-interaction \
+RUN composer require "phpunit/phpunit:~6.5.3" --no-interaction \
 && ln -s /tmp/vendor/bin/phpunit /usr/local/bin/phpunit \
 && mkdir /var/www/app
 
