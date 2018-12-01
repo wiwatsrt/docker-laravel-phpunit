@@ -2,8 +2,10 @@ FROM wiwatsrt/docker-laravel-composer
 
 WORKDIR /tmp
 
+RUN apk add --no-cache git
+
 # Run composer and phpunit installation.
-RUN composer require "phpunit/phpunit:~6.5" --no-interaction \
+RUN composer require "phpunit/phpunit:^7.0" --no-interaction \
 && ln -s /tmp/vendor/bin/phpunit /usr/local/bin/phpunit \
 && mkdir /var/www/app
 
